@@ -4,3 +4,4 @@
 #
 git,examples,https://github.com/LoyolaChicagoBooks/introcs-csharp-examples.git
 git,ios,https://bitbucket.org/josullivan1/comp170-xcode-xamarin-ios.git
+git,scala,https://github.com/LoyolaChicagoBooks/introcs-scala-examples.git
