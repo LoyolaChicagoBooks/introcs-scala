@@ -1,11 +1,13 @@
-C# Data and Operations
-######################
+Scala Data and Operations
+#########################
 
 .. toctree::
    :maxdepth: 3
 
    data_sampleprogram
    data_lab-edit-compile-run
+
+.. Content to be added:
    data_arithmetic
    data_variables
    data_typography

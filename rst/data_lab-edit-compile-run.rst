@@ -1,26 +1,24 @@
-.. index:: Xamarin Studio
-   labs; Xamarin Studio
+.. index:: IntelliJ IDEA
+   labs; IntelliJ IDEA
 
 
 .. _lab-edit-compile-run:
 
-Lab: Editing, Compiling, and Running with Xamarin Studio
-===========================================================================
+Lab: Editing, Compiling, and Running with IntelliJ IDEA
+=======================================================
 
-This first lab is aimed at taking you through the end-to-end process of
-writing and running a basic computer program with the Xamarin Studio
-environment. As with all things in
-life, we will learn in this lab that becoming a programmer requires you
-to learn a number of other things along the way.
+This first lab is aimed at taking you through the end-to-end process of writing
+and running a basic computer program with the IntelliJ IDEA environment. As
+with all things in life, we will learn in this lab that becoming a programmer
+requires you to learn a number of other things along the way.
 
-In software development/engineering parlance, we typically describe a
-scenario as a *workflow*, which can be thought of as a series of steps
-that are possibly repeated. The workflow of programming can loosely be
-defined as follows:
+In software development/engineering parlance, we typically describe a scenario
+as a *workflow*, which can be thought of as a series of steps that are possibly
+repeated. The workflow of programming can loosely be defined as follows:
 
 #. Use a text editor to write your source code (human readable).
 
-#. Compile your code using the Software Development Kit (SDK) into
+#. Compile your code using the Java Development Kit (SDK) into
    object code.
 
 #. Link your object code to create an executable. (There are other
@@ -32,259 +30,164 @@ defined as follows:
    program may not work entirely right the first time, so you may end
    up repeating these steps (debugging).
 
-These steps can all be done with different tools.  Many find it simpler to have
-an integrated tool, like Xamarin Studio, that does them all in the same place,
+These steps can all be done with different tools. Many find it simpler to have
+an integrated tool, like IntelliJ IDEA, that does them all in the same place,
 and automates the steps that do not need human interaction!  
 
-If you are doing this on your own
-machine, make sure you have Mono and Xamarin Studio installed as in
-:ref:`development-tools`.
+If you are doing this on your own machine, make sure you have the Java
+Development Kit and IntelliJ IDEA installed as in :ref:`development-tools`.
+Other tools are available, like the development environment Eclipse (available
+for all platforms).
 
-Other tools are available, like
-the development environment 
-Visual Studio (from Microsoft, only for Windows).
-
-Understanding the lower level tools that accomplish each step is important, 
-but we defer
-a discussion to get you going with Xamarin Studio.
+Understanding the lower level tools that accomplish each step is important, but
+we defer a discussion to get you going with IntelliJ IDEA.
 
 Goals
 -----
 
-Our primary goal to create and understand an Xamarin Studio setup
-that you can use to do all of
-the remaining homework assignments and labs for this course. 
+Our primary goal to create and understand an IntelliJ IDEA setup that you can
+use to do all of the remaining homework assignments and labs for this course. 
 
-
-.. index: Xamarin Studio; solution
-   Xamarin Studio; project
+.. index: IntelliJ IDEA; solution
+   IntelliJ IDEA; project
    
 .. _steps:
 
 Steps
 -----
 
-Xamarin Studio files and interactions 
-are organized hierarchically.  At a low level are
-individual C# source code files.  One, or possibly more, are used for a
-particular *project*.  Multiple projects are gathered together under a single
-*solution*.  Xamarin Studio deals with one solution at a time, though you can
-separately create multiple solutions.  The simplest thing is to create
-a *single solution for this course*, 
-and put each of the projects that you create in that one solution.   
-You can keep adding onto previous efforts without having to start over
-with a new solution each time.
+IntelliJ IDEA files and interactions are organized hierarchically. At a low
+level are individual Scala source code files, which are separated into ``main``
+and ``test`` directories. One, or possibly more, are used for a particular
+*project*. IntelliJ IDEA deals with one project at a time, though you can
+separately create multiple projects. The simplest thing is to create a *single
+project for this course*, and make a new Scala object for every assignment in
+that one solution. You can keep adding onto previous efforts without having to
+start over with a new project each time.
 
-We start by creating a *solution* with a *project* in it.  The images are from
-a Mac.  Windows versions should be similar.
+We start by creating a *project* from the splash menu. The images are from a
+Mac, but other platform versions should be similar.
 
-#.  Open Xamarin Studio, in the appropriate way for an application in your
-    operating system.  It should be in the Start menu for Windows.
-    Using Spotlight is quick on a Mac.
+#.  Open IntelliJ IDEA, in the appropriate way for an application in your
+    operating system. It should be in the Start menu for Windows. Using 
+    Spotlight is quick on a Mac.
 
-#.  You get a Welcome screen.  Toward the upper left corner is a link for 
-    New Solution.  Click on it.  Alternately you can follow the path through the menus:
-    File -> New -> Solution.  
-   
-    ..  image:: images/lab-edit/newSolution.png
-     	:alt: Xamarin Studio Start Image
+#.  You get a Welcome screen. Directly below the IntelliJ logo is the button to
+    create a new project. Click on it.    
+
+    ..  image:: images/lab-edit/newProject.png
+     	:alt: IntelliJ IDEA Start Image
      	:align: center
         :width: 227.25 pt
 
-#. You get a dialog window to fill out.  Follow the order below.  
+#. You get a dialog window to fill out. Follow the order below.  
    Later parts may not be visible until you do the previous parts:
 
-   - Select C# in left hand side panel
-   - Select Console Project in the middle panel
-   - In the bottom field, "Solution name" (*not* the top Name field),
-     enter any name you like:  We recommend **work**, which will make
-     sense for all your work for the course.
-   - Leave the Location field above it as is or change it if you like.
-   - Above that, Enter **hello** in the Name field, for the name of the project.
-   - Make sure *Create directory for solution* is checked in the bottom right.
-   - Press the OK button.
+   - Select Scala in left hand side panel. If you do not see it, you need to
+     install the Scala plugin as per the instructions in :ref:`development-tools`.
+   - Select SBT (Scala Build Tool) from the center menu. Click Next.
+
+   ..   image:: images/lab-edit/newProject.png
+     	:alt: IntelliJ IDEA Dialog Image
+     	:align: center
+        :width: 489.3 pt
+
+   - In the top field, "Project name" enter any name you like: We recommend 
+     **work**, which will make sense for all your work for the course.
+   - Leave the "Project Location" field below it as is or change it if you like.
+   - Press the Finish button.
    
-   ..   image:: images/lab-edit/consoleProjectDialog.png
-     	:alt: Xamarin Studio Dialog Image
+   ..   image:: images/lab-edit/projectSettings.png
+     	:alt: IntelliJ IDEA Dialog Image
      	:align: center
         :width: 489.3 pt
    
-   You now have created a solution in Xamarin Studio, with one project
-   inside it. Later we can add further *projects* to *this solution*. 
+   You now have created an SBT project in IntelliJ IDEA. If nothing appears
+   immediately after clicking Finish, give IntelliJ a bit of time to configure
+   your workspace.
 
-#. Look at the Xamarin Studio window that appears.  It should have two main sub-windows or 
-   "Pads" as Xamarin Studio calls them.  A narrow one on the left is the Solution Pad,
-   containing a hierarchical view of the solution.  You should see your solution name
-   at the top and the hello project under that.  
-   Folders have a little triangle shown to their 
-   left.  You can click on the triangle.  A triangle pointing down 
-   means the inside of the folder is displayed.  A triangle pointing to the right
-   means the contents are not being displayed. Listed under hello are References and
-   Properties, that we will ignore for now.  Below them is the line for the automatically
-   generated sample code file Program.cs.  
-   The file should also appear in the Edit Pad to the right.
-   
-   ..   image:: images/lab-edit/Program.png
-     	:alt: Xamarin Studio Program.cs Image
+#. Look at the IntelliJ IDEA window that appears. It should have two main
+   sub-windows. The narrow one on the left is the Project window, containing a
+   hierarchical view of the project. You should see your project name at the
+   top of the folder hierarchy. Folders have a little triangle shown
+   to their left. You can click on the triangle. A triangle pointing down means
+   the inside of the folder is displayed. A triangle pointing to the right
+   means the contents are not being displayed. Listed under the project name are
+   *.idea*, *project* and *target*, that we will ignore for now. 
+
+#. Our project is currently empty, so we need to add a Scala source file to
+   run. Open up the *src* folder, which should contain a *main* and *test*
+   folder. The *main* folder will contain most of our code, while the *test*
+   folder normally contains files for test-driven development, which will be
+   discussed later in the book and can be ignored for now. Open the *main*
+   folder, right-click the *scala* folder and add a new Scala class by
+   navigating the context menu (New -> Scala Class).
+
+   ..   image:: images/lab-edit/newScalaFile.png
+     	:alt: IntelliJ IDEA New File Dialog
+     	:align: center
+        :width: 485.25 pt
+
+   You will be presented with a new dialog box with two fields. In the name
+   field, type **LabOne** and in the *Kind* field select *Object*. Click Okay
+   and you will be see your new Scala source file.
+
+   ..   image:: images/lab-edit/newScalaObject.png
+     	:alt: IntelliJ IDEA New Scala Object
      	:align: center
         :width: 485.25 pt
    
-#. Program.cs should be selected in the Solution Pad, as shown above.  
-   Change the selection by clicking on hello. 
-   At the right end of the
-   highlighted hello entry you should see an icon with a small gear and a triangle.
-   Click on it to get the context sensitive popup window.   
-   When selected, most entries in the Solution Pad should show this icon,
-   allowing you to open its context sensitive menu. 
+#. Now we need to give this Scala object something to do. There is already an
+   object definition in our source file, just insert a ``main`` method into the
+   object body like in the Painting example
+   (:repsrc:`painting/painting.scala`).
    
-#. Bring up the context menu on the hello project in the Solution Pad.
-   Select Run Item.  
+.. literalinclude:: ../source/scala/hello/hello.scala
+   :lines: 2-4
 
-   ..   image:: images/lab-edit/runMainMenu.png
-     	:alt: Xamarin Studio Run Program.cs Image
+#. Right-click the Scala object from the Project window and select *Run 'LabOne'*
+   to compile and run code. 
+
+   ..   image:: images/lab-edit/runScalaObject.png
+     	:alt: IntelliJ IDEA Run LabOne
      	:align: center
         :width: 389.25 pt
    
+#.  Here IntelliJ IDEA combines several steps: saving the file, compiling it
+    into an executable program, and starting running it if compilation
+    succeeded. If this was successful, you should see the results print out at
+    the bottom of your IntelliJ window.
     
-#.  Here Xamarin Studio combines several steps: saving the file,
-    compiling it into an executable program, 
-    and starting running it if compilation succeeded.
-    With the canned file it should succeed!  You see a Console window
-    something like
-    
-    ..  image:: images/lab-edit/pressKey.png
-     	:alt: Xamarin Studio Press Key to close Image
+    ..  image:: images/lab-edit/terminalOutput.png
+     	:alt: IntelliJ IDEA Terminal Output
      	:align: center
         :width: 283.5 pt
    
     You have a chance to see the output of this simple program.
-    Follow the instructions and press the space or Enter key.
+    You can also type into this window for more complicated programs.
     
-#.  On Windows, that kills the window.  **On a Mac, only, there is one more step:**
-
-    ..  image:: images/lab-edit/processComplete.png
-     	:alt: Xamarin Studio Process Complete Image
-     	:align: center
-        :width: 198.75 pt
-   
-    You have to actively close the Mac terminal window, either by clicking the
-    red window closing button, or using the keyboard, with Command-W.
-
-#.  Initially, for immediate practice running a program, this automatically generated
-    file, ``Program.cs``, is convenient.  Hereafter it is an annoyance.  
-    The file name is always the same, and not useful, 
-    and you would need to redo the whole
-    code for your own program.  A general approach is to *delete* this
-    file and put in a file of your own:
-    
-    -   Make sure Program.cs is selected in the Solution Pad.
-        You save a step by closing the Edit Pad for Program.cs,
-        clicking on the X in the Program.cs tab at the top of the Edit Pad.      
-
-    -   In the Solution Pad open the context sensitive menu for Program.cs, and select
-        Remove.
-    
-        ..  image:: images/lab-edit/menuRemoveMain.png
-            :alt: Xamarin Studio Remove Program.cs Image
-            :align: center
-            :width: 326.25 pt
-   
-    -   You get another popup.  When it appears the right button is selected,
-        *but you do not want that selection*, Remove From Project. 
-        The image below shows the proper button, the
-        *left* button*, **Delete**, being chosen.  
-        Otherwise the file is left in the hello
-        folder, but it is just not listed as being in the project.
-      
-        ..  image:: images/lab-edit/sureRemove.png
-            :alt: Xamarin Studio Delete Program.cs Image
-            :align: center   
-            :width: 436.5 pt
-            
-    -   If you forgot to close the Edit Pad tab containing Program.cs earlier, you can still
-        do it, just say not to save changes to the file when asked. 
-
-#. To get in code that you want, there are several approaches.  The one we take
-   now is to start from a completely
-   new empty file:  Pop up the context sensitive menu for the hello project.
-   Select the submenu Add...  and  then New File....  
-
-   ..   image:: images/lab-edit/addNewFileMenu.png
-     	:alt: Xamarin Studio Add new file Image
-     	:align: center
-        :width: 468.75 pt
-
-#. In the popup New File Dialog Window, click on Empty File (not Empty *Class*).  
-   Enter the name hello.cs.
-   Click the New button.
-   
-   ..   image:: images/lab-edit/makeEmptyFileDialog.png
-     	:alt: Xamarin Studio Add empty file Image
-     	:align: center
-        :width: 427.5 pt
-   
-#. This should add hello.cs to the hello project and open an editing window for hello.cs.
-   The file should have no text.
-   
-   ..   image:: images/lab-edit/editEmptyHello.png
-     	:alt: Xamarin Studio edit empty file Image
-     	:align: center
-        :width: 272.25 pt
-   
-   
-   Much like in most word processors type in (or paste) 
-   the following code.  This is actually an equivalent
-   *Hello, World!* program to the automatically generated one,
-   but it is a bit shorter.  
-   It only introduces the syntax we actually *need* at the beginning,
-   and will be discussing more shortly:
-    
-   ..  literalinclude:: ../source/examples/hello/hello.cs
-       :language: csharp
-       :linenos:
-   
-   This program is deliberately simple, so you can type it into the text
-   editor quickly and become familiar with how
-   to create, edit, and save a program. 
-            
-   ..   image:: images/lab-edit/pasteHello.png
-     	:alt: Xamarin Studio Edited new file Image
-     	:align: center
-        :width: 274.5 pt
-   
-#.  You can run the project just as before.  You should ge the same result, unless
-    you made a typing error.  In that case look, fix it, and try again.
-    
-#.  Now try a bit of editing:  Look at the program to see where output came
-    from.  Change what is printed and run it, but don't eliminate the console
+#.  Now try a bit of editing: Look at the program to see where output came
+    from. Change what is printed and run it, but don't eliminate the console
     window (so you can show it off).
 
 #.  Now grab the instructor or teaching assistant so
     they can perform a quick inspection of your work and check it off
     (including the varied message printed).
     
-Labs need to be completed to receive
-credit. If you are unable to make class on a lab day, please make sure
-that you complete the work and demonstrate it by the beginning of the
-next lab.
+Labs need to be completed to receive credit. If you are unable to make class on
+a lab day, please make sure that you complete the work and demonstrate it by
+the beginning of the next lab.
 
-At this point, you have accomplished the major objective for this
-introductory lab: to create a Xamarin Studio project, and
-enter, compile, and run a C# program. 
+At this point, you have accomplished the major objective for this introductory
+lab: to create an IntelliJ IDEA project, and enter, compile, and run a Scala
+program. 
 
 For further reinforcement
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #. Can you make a new program variant print out two *separate* lines?
    
-#. Download and install Mono Software Development Kit and Xamarin Studio on
+#. Download and install Java Development Kit and IntelliJ IDEA on
    your home computer or laptop.  
    
-#. You can now add further projects to your *current* solution.  
-   To add a new project in your solution, in the Solution Pad open the context
-   sensitive menu for the whole solution (top line), select Add,
-   and in the submenu select New project.
-   
-   You see a window much like when creating a solution, except there is no
-   line for a solution name.  Complete the remaining parts in the same
-   way, giving a new name for the project.
+#. You can now add further objects to your *current* project.  
