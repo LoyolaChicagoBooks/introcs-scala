@@ -12,24 +12,24 @@ Introduction to Computer Science in C#
    :maxdepth: 2
    :numbered:
 
-   context
-   data
-   functions
-   basicstringops
-   decisions
-   while
-   foreach
-   for
-   files
-   arrays
-   lists
-   dictionaries
-   classes
-   testing
-   interfaces
-   recursion
-   datastructures
-   appendix
+   context/index
+   data/index
+   functions/index
+   basicstringops/index
+   decisions/index
+   while/index
+   foreach/index
+   for/index
+   files/index
+   arrays/index
+   lists/index
+   dictionaries/index
+   classes/index
+   testing/index
+   interfaces/index
+   recursion/index
+   datastructures/index
+   appendix/index
    
 :ref:`genindex`
 
