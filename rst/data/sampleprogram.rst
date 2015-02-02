@@ -104,7 +104,7 @@ will not start printing to the next line. This allows user input to be on the
 same line as printed output.
 
 .. literalinclude:: ../../source/scala/painting/painting.scala
-   :lines: 7
+   :lines: 6
    
 A program works with data of many different possible types. One type is
 ``Double``.  A ``Double`` can hold an approximate numerical value, including a
@@ -124,7 +124,7 @@ type of the variable defined, the compiler can make implicit assumptions. This
 same statement could also just be written as ``val HEIGHT = 8.0``.
 
 .. literalinclude:: ../../source/scala/painting/painting.scala
-   :lines: 8
+   :lines: 7
 
 This is another declaration. This time the type of the variables is
 ``string``, which means a sequence of characters, like a line you
