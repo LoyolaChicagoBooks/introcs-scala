@@ -31,8 +31,8 @@ extensions = ['sphinx.ext.todo', 'sphinx.ext.mathjax', 'sphinx.ext.extlinks' ]
 
 todo_include_todos = True
 
-extlinks = {'repsrc': 
-              ('https://github.com/LoyolaChicagoBooks/introcs-csharp-examples/blob/master/%s','')
+extlinks = {'repsrc':
+              ('https://github.com/LoyolaChicagoBooks/introcs-scala-examples/blob/master/%s','')
            }
 
 # Add any paths that contain templates here, relative to this directory.
@@ -48,8 +48,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Introduction to Computer Science in C#'
-copyright = u'2015, Andrew N. Harrington and George Thiruvathukal'
+project = u'Introduction to Computer Science in Scala'
+copyright = u'2015, Andrew N. Harrington, George Thiruvathukal, and Griffin Moe'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -95,8 +95,8 @@ pygments_style = 'sphinx'
 #modindex_common_prefix = []
 
 rst_prolog = """
-.. highlight:: csharp
-   
+.. highlight:: scala
+
 """
 
 rst_epilog = """
@@ -163,7 +163,7 @@ html_theme_options = {
     # such as "amelia" or "cosmo".
     #
     # Note that this is served off CDN, so won't be available offline.
-    'bootswatch_theme': "united",
+    'bootswatch_theme': "readable",
 
     'bootstrap_version' : "3"
 }
@@ -239,7 +239,7 @@ html_show_sphinx = False
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'comp170doc'
 
-highlight_language = 'csharp'
+highlight_language = 'scala'
 
 # -- Options for LaTeX output --------------------------------------------------
 
@@ -257,8 +257,8 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'comp170.tex', u'Introduction to Computer Science in C\\#',
-   u'Andrew N. Harrington and George K. Thiruvathukal', 'manual'),
+  ('index', 'comp170.tex', u'Introduction to Computer Science in Scala',
+   u'Andrew N. Harrington, George K. Thiruvathukal, and Griffin Moe', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -287,8 +287,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'introcscsharp', u'Introduction to Computer Science in C#',
-     [u'Andrew N. Harrington and George K. Thiruvathukal'], 1)
+    ('index', 'introcsscala', u'Introduction to Computer Science in Scala',
+     [u'Andrew N. Harrington, George K. Thiruvathukal, and Griffin Moe'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -301,9 +301,9 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'comp170', u'Introduction to Computer Science in C#',
-   u'Andrew N. Harrington and George K. Thiruvathukal', 'comp170', 
-   'C# Notes.',
+  ('index', 'comp170', u'Introduction to Computer Science in Scala',
+   u'Andrew N. Harrington, George K. Thiruvathukal, and Griffin Moe', 'comp170',
+   'Scala Notes.',
    'Miscellaneous'),
 ]
 
